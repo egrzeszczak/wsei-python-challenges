@@ -3,7 +3,10 @@
 import random
 
 matrix_size = int(input("[matrix] size: "))
-matrix = [[random.randrange(0, 999) for y in range(0, matrix_size)] for x in [ int(y) for y in range(0, matrix_size) ]]
+matrix = [
+    [random.randrange(0, 999) for y in range(0, matrix_size)]
+    for x in [int(y) for y in range(0, matrix_size)]
+]
 
 for y in matrix:
     print(y)

@@ -8,9 +8,9 @@ list_of_numbers = [
     random.randrange(0, 1000) for x in range(0, random.randrange(0, 1000))
 ]
 
-# Zmienne 
-most_occuring = 1   # Liczba która najczęściej występuje
-occurances = 1      # Ilość wystąpień
+# Zmienne
+most_occuring = 1  # Liczba która najczęściej występuje
+occurances = 1  # Ilość wystąpień
 
 # Logika
 for i in list_of_numbers:
