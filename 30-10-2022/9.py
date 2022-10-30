@@ -4,6 +4,9 @@
 # DESC: Zadanie powinno zostać wykonane z użyciem funkcji.
 
 
+from math import sqrt
+
+
 def mozna(boki):
     """
     Funkacja sprawdza czy można utworzyć trójkąt prosotąkny to tych bokach
@@ -17,13 +20,26 @@ def mozna(boki):
 
 
 def pole(boki):
-    pass
+    """
+    Wzór Herona
+    https://www.matmana6.pl/wzor-herona
+    """
+    return sqrt(
+        (obwod(boki) / 2)
+        * ((obwod(boki) / 2) - boki[0])
+        * ((obwod(boki) / 2) - boki[1])
+        * ((obwod(boki) / 2) - boki[2])
+    )
 
 
 def obwod(boki):
-    pass
+    return sum(boki)
 
 
 boki = []
 while len(boki) < 3:
     boki.append(int(input("bok: ")))
+
+if mozna(boki):
+    print(f"Obwód: {obwod(boki)}")
+    print(f"Pole: {pole(boki)}")
